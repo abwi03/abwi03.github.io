@@ -36,13 +36,12 @@ var lemmonchiffonTriangle = {
     colour: 'lemonchiffon',
     draw: function(){
         fill(this.colour);
-        stroke('mediumslateblue');       // outline color
+        stroke('mediumslateblue');
         strokeWeight(6);
-        // Draw an upward-pointing triangle
         triangle(
-            this.x, this.y,                      // top vertex
-            this.x - this.w / 2, this.y + this.h, // bottom left
-            this.x + this.w / 2, this.y + this.h  // bottom right
+            this.x, this.y,
+            this.x - this.w / 2, this.y + this.h,
+            this.x + this.w / 2, this.y + this.h
         );
     },
     move: function(){
@@ -53,6 +52,32 @@ var lemmonchiffonTriangle = {
             this.xSpeed *= -1;
         }
         if(this.y > height || this.y < 0){
+            this.ySpeed *= -1;
+        }
+    }
+};
+
+var lightpinkSquare = {
+    x: 0,
+    y: 0,
+    size: 60,
+    xSpeed: 10,
+    ySpeed: 30,
+    colour: 'lightpink',
+    draw: function(){
+        fill(this.colour);
+        stroke('aquamarine');       // outline color
+        strokeWeight(10);
+        rect(this.x, this.y, this.size, this.size);
+    },
+    move: function(){
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
+
+        if (this.x < 0 || this.x > width - this.size) {
+            this.xSpeed *= -1;
+        }
+        if (this.y < 0 || this.y > height - this.size) {
             this.ySpeed *= -1;
         }
     }
@@ -71,4 +96,6 @@ function draw(){
     purpleCircle.move();
     lemmonchiffonTriangle.draw();
     lemmonchiffonTriangle.move();
+    lightpinkSquare.draw();
+    lightpinkSquare.move();
 }
