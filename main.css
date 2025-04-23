@@ -1,0 +1,47 @@
+.img-waterfall {
+    width: 800px;
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #323479;
+    text-align: center;
+}
+
+.waterfall-mv{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    color:#88A7B9;
+}
+
+a:hover{
+    color:#C6C4C5;
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #324b91;
+}
+
+.future-assignments{
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    float: left;
+
+}
+
+.future-labs{
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    float: right;
+
+}
+
+.future{
+    padding: 0 100px;
+}
