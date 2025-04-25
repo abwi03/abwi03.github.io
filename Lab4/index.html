@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4 Multimedia</title>
+    <style>
+        body {
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #usagidance {
+            width: 1000px;
+            height: auto;
+            border-radius: 15%;
+        }
+
+        #bunny {
+            width: 200px;
+            height: auto;
+            border-radius: 15%;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #bunny:hover{
+            border: 5px solid darksalmon;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="usagidance">
+        <source src="CHIIKAWA USAGIS SINGING.mp4">
+        <source src="CHIIKAWA USAGI'S SINGING.avi">
+        <source src="CHIIKAWA USAGI'S SINGING.ogg">
+    </video>
+    <img src="usagi.jpg" title="Usagi" id="bunny">
+    <audio id="backgroundAudio" controls>
+        <source src="[Cover] ENHYPEN JAY - Always (1995 Wembley ver. 원곡 ： Bon Jovi).wav">
+    </audio>
+    <script>
+        var usagiimg = document.getElementById('bunny');
+        var usagivid = document.getElementById('usagidance');
+        var backgroundAudio = document.getElementById('backgroundAudio');
+
+        backgroundAudio.volume = 0.1;
+
+        usagiimg.onclick = function() {
+            if (usagivid.paused) {
+                usagivid.play();
+            } else {
+                usagivid.pause();
+            }
+        };
+    </script>
+</body>
+</html>
