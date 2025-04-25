@@ -1,3 +1,5 @@
+// i used the tutorials off of p5.js to help with this things to buy/grocery list
+// https://p5js.org/reference/#group-Events
 let groceryList = []; 
 let inputField; 
 let addButton; 
