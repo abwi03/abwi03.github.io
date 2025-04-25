@@ -6,7 +6,6 @@ let clearButton;
 let savedData = [];
 
 function preload() {
-  // Use try-catch to handle JSON loading errors
   try {
     songData = loadJSON('package.json', () => {
       console.log('songData loaded successfully');
@@ -17,20 +16,17 @@ function preload() {
 }
 
 function setup() {
-  // If songData is not available yet, show a loading message
   if (!songData) {
     createElement('h1', 'Loading data, please wait...').style('text-align', 'center').style('color', 'red');
-    return; // Stop setup until songData is available
+    return;
   }
 
   noCanvas();
 
-  // Heading
   createElement('h1', 'Rank the Songs from the Album "YOUNI-T"')
     .style('text-align', 'center')
     .style('color', '#34373B');
 
-  // Spotify link
   createA(
     'https://open.spotify.com/album/6rTNYVHdejHf1dAdtvMr9t?si=ZHEXXmJ6RlS3pj_odhXgIw',
     '🎵 Listen to the Album on Spotify 🎵',
@@ -45,14 +41,12 @@ function setup() {
 
   let container = createDiv().class('container');
 
-  // Load saved rankings (if available)
   const stored = localStorage.getItem('songRankings');
   if (stored) {
     savedData = JSON.parse(stored);
     console.log('Loaded saved rankings:', savedData);
   }
 
-  // Create input fields for each song
   for (let i = 0; i < songData.songs.length; i++) {
     let row = createDiv().class('row').parent(container);
 
@@ -74,7 +68,6 @@ function setup() {
     reasons.push(reasonInput);
   }
 
-  // Prefill the inputs with saved data
   for (let i = 0; i < songData.songs.length; i++) {
     if (savedData[i]) {
       inputs[i].value(savedData[i].rank);
@@ -82,28 +75,25 @@ function setup() {
     }
   }
 
-  // Submit button to save rankings
   submitButton = createButton('Lock In');
   submitButton.class('submit-button');
   submitButton.mousePressed(saveData);
   submitButton.parent(container);
+  submitButton.style('font-family', 'Times New Roman');
 
-  // Clear button to reset rankings
   clearButton = createButton('Rethink Your Thoughts');
   clearButton.class('clear-button');
   clearButton.mousePressed(clearData);
   clearButton.parent(container);
+  clearButton.style('font-family', 'Times New Roman');
 
-  // Center buttons and add space between them
   styleButtons();
 }
 
-// Save rankings to localStorage
 function saveData() {
   let rankings = [];
   let seenRanks = new Set();
 
-  // Gather rankings and reasons
   for (let i = 0; i < inputs.length; i++) {
     const rank = parseInt(inputs[i].value());
 
@@ -126,13 +116,11 @@ function saveData() {
     });
   }
 
-  // Save to localStorage
   localStorage.setItem('songRankings', JSON.stringify(rankings));
   console.log('Saved rankings:', rankings);
   alert('Your rankings have been saved!');
 }
 
-// Clear rankings from localStorage and reset inputs
 function clearData() {
   localStorage.removeItem('songRankings');
   inputs.forEach(input => input.value(''));
@@ -141,14 +129,11 @@ function clearData() {
   alert('Your rankings have been cleared!');
 }
 
-// Styling for buttons
 function styleButtons() {
-  // Centering the buttons
   const container = select('.container');
   container.child(submitButton);
   container.child(clearButton);
 
-  // Apply styling to both buttons (same style)
   submitButton.style('display', 'block')
     .style('width', '200px')
     .style('height', '50px')
@@ -163,10 +148,11 @@ function styleButtons() {
     .style('width', '200px')
     .style('height', '50px')
     .style('font-size', '18px')
-    .style('background-color', '#f44336') // Red background
+    .style('background-color', '#f44336')
     .style('color', 'white')
     .style('border', 'none')
     .style('border-radius', '5px')
     .style('margin', '10px auto');
 }
+
 
