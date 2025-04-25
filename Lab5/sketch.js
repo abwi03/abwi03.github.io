@@ -15,7 +15,7 @@ function setup() {
   // Heading
   createElement('h1', 'Rank the Songs from the Album "YOUNI-T"')
     .style('text-align', 'center')
-    .style('color', '#34373B'); // fixed: added quotes around hex color
+    .style('color', '#34373B');
 
   // Spotify link
   createA(
@@ -37,16 +37,9 @@ function setup() {
   if (stored) {
     savedData = JSON.parse(stored);
     console.log('Loaded saved rankings:', savedData);
-
-    // Pre-fill the inputs with saved data
-    for (let i = 0; i < songData.songs.length; i++) {
-      if (savedData[i]) {
-        inputs[i].value(savedData[i].rank);
-        reasons[i].value(savedData[i].reason);
-      }
-    }
   }
 
+  // Create input fields for each song
   for (let i = 0; i < songData.songs.length; i++) {
     let row = createDiv().class('row').parent(container);
 
@@ -66,6 +59,14 @@ function setup() {
     reasonInput.class('reason-input');
     reasonInput.parent(row);
     reasons.push(reasonInput);
+  }
+
+  // Prefill the inputs with saved data
+  for (let i = 0; i < songData.songs.length; i++) {
+    if (savedData[i]) {
+      inputs[i].value(savedData[i].rank);
+      reasons[i].value(savedData[i].reason);
+    }
   }
 
   // Submit button to save rankings
@@ -155,6 +156,3 @@ function styleButtons() {
     .style('border-radius', '5px')
     .style('margin', '10px auto');
 }
-
-
-  
