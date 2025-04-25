@@ -118,7 +118,7 @@ function saveData() {
 
   localStorage.setItem('songRankings', JSON.stringify(rankings));
   console.log('Saved rankings:', rankings);
-  alert('Your rankings have been saved!');
+  alert('Good Choices!!');
 }
 
 function clearData() {
