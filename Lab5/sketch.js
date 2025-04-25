@@ -6,10 +6,23 @@ let clearButton;
 let savedData = [];
 
 function preload() {
-  songData = loadJSON('package.json'); // Make sure this path is correct
+  // Use try-catch to handle JSON loading errors
+  try {
+    songData = loadJSON('package.json', () => {
+      console.log('songData loaded successfully');
+    });
+  } catch (error) {
+    console.error('Error loading package.json:', error);
+  }
 }
 
 function setup() {
+  // If songData is not available yet, show a loading message
+  if (!songData) {
+    createElement('h1', 'Loading data, please wait...').style('text-align', 'center').style('color', 'red');
+    return; // Stop setup until songData is available
+  }
+
   noCanvas();
 
   // Heading
@@ -156,3 +169,4 @@ function styleButtons() {
     .style('border-radius', '5px')
     .style('margin', '10px auto');
 }
+
