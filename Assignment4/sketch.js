@@ -94,7 +94,7 @@ function draw() {
   if (frameCount % 5 === 0) {
     for (let i = 0; i < 4; i++) {
       bigSparkles.push(new Sparkle(random(width), random(height), random(10, 50), false));
-      skinnySparkles.push(new Sparkle(random(width), random(height), random(8, 30), true));
+      skinnySparkles.push(new Sparkle(random(width), random(height), random(5, 20), true));
     }
   }
 
