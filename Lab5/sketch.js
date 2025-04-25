@@ -83,13 +83,13 @@ function setup() {
   }
 
   // Submit button to save rankings
-  submitButton = createButton('Save Rankings');
+  submitButton = createButton('Lock In');
   submitButton.class('submit-button');
   submitButton.mousePressed(saveData);
   submitButton.parent(container);
 
   // Clear button to reset rankings
-  clearButton = createButton('Clear Rankings');
+  clearButton = createButton('Rethink Your Thoughts');
   clearButton.class('clear-button');
   clearButton.mousePressed(clearData);
   clearButton.parent(container);
