@@ -29,7 +29,6 @@ function setup() {
   clearButton = createButton('Clear List');
   clearButton.position(centerX - clearButton.width / 2 + 90, height - 100);
   clearButton.mousePressed(clearList);
-  clearButton.style('font-size', '20px');
   clearButton.style('background-color', 'Lavender');
   clearButton.style('border-color', 'plum');
   clearButton.style('border-radius', '20px');
@@ -40,6 +39,7 @@ function setup() {
   itemCountSlider.position(centerX - itemCountSlider.width / 1.10, height - 70);
   itemCountSlider.style('width', '250px');
   itemCountSlider.style('height', '30px');
+
   textSize(16);
   textAlign(CENTER, TOP);
   fill(0);
@@ -47,24 +47,25 @@ function setup() {
 }
 
 function draw() {
-    background('LavenderBlush');
+  background('LavenderBlush');
 
-    textSize(20);
-    textAlign(CENTER, TOP);
-    text("Things I Need to Buy:", width / 2, 150);
+  textSize(20);
+  textAlign(CENTER, TOP);
+  text("Things I Need to Buy:", width / 2, 150);
 
-    textAlign(LEFT, TOP);
-    for (let i = 0; i < groceryList.length; i++) {
-      text(groceryList[i], width / 2 - 150, 190 + i * 20);
-      if (i >= 10) { 
-      }
+  textAlign(LEFT, TOP);
+  for (let i = 0; i < groceryList.length; i++) {
+    text(groceryList[i], width / 2 - 150, 190 + i * 20);
+    if (i >= 10) { 
+      break;
     }
-
-    textSize(15);
-    textAlign(LEFT, TOP);
-    text("Items to Add: " + itemCountSlider.value(), 550, 120);
   }
-  
+
+  textSize(15);
+  textAlign(LEFT, TOP);
+  text("Items to Add: " + itemCountSlider.value(), 550, 120);
+}
+
 function addItem() {
   let item = inputField.value();
   let numItems = itemCountSlider.value();
@@ -82,4 +83,3 @@ function clearList() {
 
 function mousePressed() {
 }
-
