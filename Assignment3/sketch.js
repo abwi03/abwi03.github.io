@@ -51,7 +51,7 @@ function draw() {
 
     textSize(20);
     textAlign(CENTER, TOP);
-    text("Grocery List:", width / 2, 150);
+    text("Things I Need to Buy:", width / 2, 150);
 
     textAlign(LEFT, TOP);
     for (let i = 0; i < groceryList.length; i++) {
