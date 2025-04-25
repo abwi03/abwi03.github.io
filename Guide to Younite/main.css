@@ -1,0 +1,428 @@
+.younite{
+    width: 800px;
+    display: block;
+    margin: auto;
+    padding: auto;
+    border-radius: 20px;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #494D89;
+    padding: 210px 0 300px 0;
+    width: 100%;
+    
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: #4C6BAB;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: auto;
+}
+
+.about{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: 34373B;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding: auto;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.Younite-grp-photo {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0; 
+    cover: 40%;
+}
+
+
+.meet-the-members{
+   padding-top: 150pt;
+}
+
+.members{
+    font-size: 45px;
+    color: #494D89;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(#ffffff, #D9E3F1);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card-wrapper {
+    padding: 100px 10px;
+    overflow: hidden;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    width: 350px;
+    margin: 0 auto; 
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+
+.card-list .card-item .card-link:hover {
+    border-color: #4C6BAB;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+    color: #494D89;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #91B7C9;
+    font-weight: bold;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .badge.eunho {
+    color: #E42E2E;
+    background: #E9A0A0;
+}
+
+.card-list .card-link .badge.steve {
+    color: #E4832E;
+    background: #E7B385;
+}
+
+.card-list .card-link .badge.hyunseung {
+    color: #DFCF28;
+    background: #F4EEAD;
+}
+
+.card-list .card-link .badge.eunsang {
+    color: #9BDC2A;
+    background: #D0ED9F;
+}
+
+.card-list .card-link .badge.hyungseok {
+    color: #2DD2DE;
+    background: #B3E8EC;
+}
+
+.card-list .card-link .badge.woono {
+    color: #424FD6;
+    background: #8F96EC;
+}
+
+.card-list .card-link .badge.dey {
+    color: #832EE4;
+    background: #CBA7F5;
+}
+
+.card-list .card-link .badge.kyungmun {
+    color: #AC31E9;
+    background: #CFA6E4;
+}
+
+.card-list .card-link .badge.sion {
+    color: #DB37C8;
+    background: #EFAAD3;
+}
+
+.card-list .card-link .card-title {
+    font-size: 15px;
+    color: #34373B;
+    font-weight: normal;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #494D89;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #91B7C9;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #ffffff;
+    background: #91B7C9;
+}
+
+.card-wapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #91B7C9;
+}
+
+.card-wapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h4{
+    font-size: 15px;
+    color: #4C6BAB;
+}
+
+.card__description{
+    font-size: 11.5px;
+    color: #91B7C9;
+}
+
+.tracklist{
+    font-size: 10pt;
+    list-style: none;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    color: #34373B;
+}
+
+.title{
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h3{
+    font-size: 30pt;
+    text-align: center;
+    color: #494D89;
+}
+
+.album-container {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.card__article {
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img {
+    width: 328px;
+    border-radius: 20px;
+}
+
+.card__data {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    position: absolute;
+    bottom: -18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+/* BUTTON STYLES */
+.card__button_1,
+.card__button_2 {
+    background-color: #ffffff;
+    color: #4C6BAB;
+    padding: 2px 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 50pt;
+    cursor: pointer;
+    border: 1.5px solid #4C6BAB;
+    transition: all 0.3s ease;
+}
+
+.card__button_1:hover,
+.card__button_2:hover {
+    background-color: #4C6BAB;
+    color: #ffffff;
+}
+
+/* BUTTON WRAPPER – adds space between the two buttons */
+.card__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* CARD HOVER EFFECTS */
+.card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.card__article:hover {
+    animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+}
+
+/* KEYFRAMES */
+@keyframes show-data {
+    50% {
+        transform: translateY(-20rem);
+    }
+    100% {
+        transform: translateY(-16rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-16rem);
+    }
+    50% {
+        transform: translateY(-20rem);
+    }
+    100% {
+        transform: translateY(0.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+    50% {
+        overflow: hidden;
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 340px) {
+    .container {
+        margin-inline: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container {
+        height: 100vh;
+    }
+
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card__img {
+        width: 348px;
+    }
+
+    .card__data {
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+.sns {
+    text-align: center;
+    font-size: 15pt;
+}
+
+.offical_sns{
+    font-size: 20pt;
+    padding-top: 55px;
+    color: #049168;
+}
+
+.socials {
+    text-decoration: none;
+    color: #4C6BAB;
+    cursor: pointer;
+}
+
+.socials:hover {
+    color: #91B7C9;
+}
